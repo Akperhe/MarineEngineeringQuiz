@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     //this method login is execute when the user click login
     public void loginButton(View view) {
         EditText userNameInput = (EditText) findViewById(R.id.user_name);
+
         if (userNameInput.getText().toString().trim().length() != 0) {
             LinearLayout loginPage = (LinearLayout) findViewById(R.id.login_page);
             loginPage.setVisibility(View.GONE);
@@ -380,6 +381,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radio_button_B);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radio_Button_C);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radio_Button_D);
+
         if (radioButtonA.isChecked())
             userAnswer[currentQueNum - 1] = radioButtonA.getText().toString();
         else if (radioButtonB.isChecked())
