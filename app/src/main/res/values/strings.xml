@@ -1,0 +1,90 @@
+<resources>
+
+    <string name="app_name">Marine Engineering Quiz</string>
+    <string name="test_instructions">
+        1. The Prev button takes you back while it unmarks your last answer so do re-mark it.\n
+        2. The Next button collates your answers as you go forward\n
+        3. The Submit Button is available at anytime you want to submit\n
+        4. You have 10 questions to answer\n
+        5. Click START to begin test\n\n
+        For enquiries contact theakperheovo@gmail.com
+    </string>
+    <string-array name="questions">
+        <item>1)  A large, low-speed, main propulsion diesel engine uses sea water to directly cool the</item>
+        <item>2)  Which of these fuel oil impurities can cause maximum abrasive damage?</item>
+        <item>3)  To check the setting of the over speed trip on a diesel powered generator, you would use a</item>
+
+        <!--this below question must be a reply with three possible answers out of four only because of the constraint in the java code-->
+        <item>4)  What are/is the probable cause of sudden stop of diesel engine (multiple choices)</item>
+
+        <item>5)  In a naturally aspirated diesel engine, the volume of air intake is directly related to engine</item>
+        <item>6)  Which of the following gauges are generally used to evaluate main bearing clearances?</item>
+
+        <!--this below question must be a reply that require the user to type in answer just a word only-->
+        <item>7)  In modern marine 2-stroke diesel engines, _____ is sometimes used as a coating on the underside of the exhaust valve disc, to reduce the rate of hot corrosion.</item>
+
+        <item>8)  The fall in speed that occurs in a diesel engine equipped with governor, on increase of load is called:</item>
+        <item>9)  Which of the following conditions can lead to reduced power developed by a main engine?</item>
+
+        <!--this below question must be a reply that require the user to type in answer just a word only-->
+        <item>10) In a 2-stroke engine a _____ separates the under piston space from the crankcase</item>
+    </string-array>
+
+    <string-array name="solutions">
+        <item>scavenging air</item>
+        <item>Catalytic fines</item>
+        <item>tachometer</item>
+        <item>air in system,water in system,air filter chocked</item>
+        <item>valve size</item>
+        <item>Telescopic feeler gauge</item>
+        <item>inconel</item>
+        <item>Speed droop</item>
+        <item>All of the above</item>
+        <item>Diaphragm</item>
+    </string-array>
+
+    <!--these are the four option to a question-->
+    <string name="que1Ans1">cylinder heads</string>
+    <string name="que1Ans2">exhaust valves</string>
+    <string name="que1Ans3">scavenging air</string>
+    <string name="que1Ans4">injectors</string>
+
+    <string name="que2Ans1">Water</string>
+    <string name="que2Ans2">Ash</string>
+    <string name="que2Ans3">Catalytic fines</string>
+    <string name="que2Ans4">Sodium</string>
+
+    <string name="que3Ans1">tachometer</string>
+    <string name="que3Ans2">torsion meter</string>
+    <string name="que3Ans3">dynamometer</string>
+    <string name="que3Ans4">pony brake</string>
+
+    <string name="que4Ans1">air in system</string>
+    <string name="que4Ans2">water in system</string>
+    <string name="que4Ans3">air filter chocked</string>
+    <string name="que4Ans4">water in air filter</string>
+
+    <string name="que5Ans1">compression ratio</string>
+    <string name="que5Ans2">valve size</string>
+    <string name="que5Ans3">fuel pressure</string>
+    <string name="que5Ans4">cylinder clearance volume</string>
+
+    <string name="que6Ans1">Poker gauge</string>
+    <string name="que6Ans2">Feeler gauge</string>
+    <string name="que6Ans3">Telescopic feeler gauge</string>
+    <string name="que6Ans4">Dial gauge</string>
+
+    <!--here is question 7 which doesn't need options but user text-->
+
+    <string name="que8Ans1">Offset</string>
+    <string name="que8Ans2">Speed droop</string>
+    <string name="que8Ans3">Speed drop</string>
+    <string name="que8Ans4">Speed offset</string>
+
+    <string name="que9Ans1">High scavenge air temperature</string>
+    <string name="que9Ans2">Choked air suction filter of a turbocharger</string>
+    <string name="que9Ans3">Blow past in one or more units</string>
+    <string name="que9Ans4">All of the above</string>
+
+    <!--here is question 10 which does'nt need options but user text-->
+</resources>
