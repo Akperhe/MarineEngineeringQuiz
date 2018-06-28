@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //this method display the next question
+    //this method displays the next question
     public void nextButton(View view) {
         Button submit = (Button) findViewById(R.id.start_and_submit_button);
         RadioGroup radioButtons = (RadioGroup) findViewById(R.id.radio_group);
