@@ -24,7 +24,7 @@ public class QuizSummaryActivity extends AppCompatActivity {
     }
 
     //this method grade the user on three scale NOVICE INTERMEDIATE and ADVANCE
-    public void gradeUser(){
+    public void gradeUser() {
         TextView summary = (TextView) findViewById(R.id.summary);
         Intent intent = getIntent();//getIntent get the previous parameter passed to this activity
         score = Integer.parseInt(intent.getStringExtra("score"));
@@ -34,32 +34,32 @@ public class QuizSummaryActivity extends AppCompatActivity {
         currentQueNum = Integer.parseInt(intent.getStringExtra("currentQueNum"));
         ImageView proficiency = (ImageView) findViewById(R.id.proficiency);
 
-        if (score < 5 && currentQueNum<maxNumOfQues) {
+        if (score < 5 && currentQueNum < maxNumOfQues) {
             summary.setText("Dear " + userName + " your final score is " + score + "\nLevel of proficiency is Novice\nNo. of skipped questions: " + noOfSkippedQues + oops + "\nWORK HARD");
             proficiency.setImageResource(R.drawable.novice);
         }
 
-        if (score < 5 && currentQueNum==maxNumOfQues) {
+        if (score < 5 && currentQueNum == maxNumOfQues) {
             summary.setText("Dear " + userName + " your final score is " + score + "\nLevel of proficiency is Novice\nNo. of skipped questions: " + noOfSkippedQues + "\nWORK HARD");
             proficiency.setImageResource(R.drawable.novice);
         }
 
-        if (score >= 5 && score < 8 && currentQueNum<maxNumOfQues) {
+        if (score >= 5 && score < 8 && currentQueNum < maxNumOfQues) {
             summary.setText("Dear " + userName + " your final score is " + score + "\nLevel of proficiency is Intermediate\nNo. of skipped questions: " + noOfSkippedQues + oops + "\nKEEP IT UP");
             proficiency.setImageResource(R.drawable.intermediate);
         }
 
-        if (score >= 5 && score <8 && currentQueNum==maxNumOfQues) {
+        if (score >= 5 && score < 8 && currentQueNum == maxNumOfQues) {
             summary.setText("Dear " + userName + " your final score is " + score + "\nLevel of proficiency is Intermediate\nNo. of skipped questions: " + noOfSkippedQues + "\nKEEP IT UP");
             proficiency.setImageResource(R.drawable.intermediate);
         }
 
-        if (score >= 8 && currentQueNum<maxNumOfQues) {
+        if (score >= 8 && currentQueNum < maxNumOfQues) {
             summary.setText("Dear " + userName + " your final score is " + score + "\nLevel of proficiency is Advance\nNo. of skipped questions: " + noOfSkippedQues + oops + "\nCONGRATULATION");
             proficiency.setImageResource(R.drawable.advanced);
         }
 
-        if (score >= 8 && currentQueNum==maxNumOfQues) {
+        if (score >= 8 && currentQueNum == maxNumOfQues) {
             summary.setText("Dear " + userName + " your final score is " + score + "\nLevel of proficiency is Advanced\nNo. of skipped questions: " + noOfSkippedQues + "\nCONGRATULATION");
             proficiency.setImageResource(R.drawable.advanced);
         }
@@ -68,7 +68,10 @@ public class QuizSummaryActivity extends AppCompatActivity {
 
     //this will minimized
     public void exitApp(View view) {
-        finish();
-        moveTaskToBack(true);
+        Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+        homeIntent.addCategory(Intent.CATEGORY_HOME);
+        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(homeIntent);
+
     }
 }
