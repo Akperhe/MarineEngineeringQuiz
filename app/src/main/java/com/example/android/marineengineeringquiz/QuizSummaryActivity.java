@@ -66,6 +66,7 @@ public class QuizSummaryActivity extends AppCompatActivity {
 
     }
 
+    //this will minimized
     public void exitApp(View view) {
         finish();
         moveTaskToBack(true);

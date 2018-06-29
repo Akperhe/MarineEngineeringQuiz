@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,6 +62,7 @@
                 android:text="LOGIN" />
         </LinearLayout>
 
+        <!-- I make use of one TextView to display all questions in order not to populate the xml file-->
         <TextView
             android:id="@+id/questions_pane"
             android:layout_width="match_parent"
@@ -90,6 +90,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <!-- I make use of one RadioGroup to display all options in order not to populate the xml file then manipulate it in the java code-->
             <RadioGroup
                 android:id="@+id/radio_group"
                 android:layout_width="wrap_content"
@@ -127,7 +128,6 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:id="@+id/check_group"
             android:layout_width="match_parent"
@@ -160,6 +160,7 @@
 
         </LinearLayout>
 
+        <!-- I make use of one EditText to receive the user response in order not to populate the xml file then manipulate the use in the java code-->
         <EditText
             android:id="@+id/input_text"
             android:layout_width="match_parent"
