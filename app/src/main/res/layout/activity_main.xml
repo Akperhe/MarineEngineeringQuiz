@@ -173,21 +173,11 @@
             android:maxLines="1" />
 
         <LinearLayout
-            android:id="@+id/nav_submit_buttons"
+            android:id="@+id/next_and_submit_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/prev_button"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1"
-                android:onClick="prevButton"
-                android:text="prev"
-                android:textAllCaps="true" />
 
             <Button
                 android:id="@+id/start_and_submit_button"
@@ -197,7 +187,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"
                 android:onClick="startOrSubmitButton"
-                android:text="start"
+                android:text="@string/start_button"
                 android:textAllCaps="true" />
 
             <Button

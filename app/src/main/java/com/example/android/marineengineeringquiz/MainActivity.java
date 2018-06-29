@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);//this hide the keyboard on start of app
         LinearLayout checkGroup = (LinearLayout) findViewById(R.id.check_group);
         checkGroup.setVisibility(View.GONE);
-        LinearLayout navSubmitButtons = (LinearLayout) findViewById(R.id.nav_submit_buttons);
-        navSubmitButtons.setVisibility(View.GONE);
+        LinearLayout nextAndSubmitButtons = (LinearLayout) findViewById(R.id.next_and_submit_buttons);
+        nextAndSubmitButtons.setVisibility(View.GONE);
         EditText inputText = (EditText) findViewById(R.id.input_text);
         inputText.setVisibility(View.GONE);
         LinearLayout radioButton = (LinearLayout) findViewById(R.id.radio_group);
@@ -65,10 +65,8 @@ public class MainActivity extends AppCompatActivity {
             loginPage.setVisibility(View.GONE);
             TextView questionsPane = (TextView) findViewById(R.id.questions_pane);
             questionsPane.setVisibility(View.VISIBLE);
-            LinearLayout navSubmitButtons = (LinearLayout) findViewById(R.id.nav_submit_buttons);
-            navSubmitButtons.setVisibility(View.VISIBLE);
-            Button prevButton = (Button) findViewById(R.id.prev_button);
-            prevButton.setEnabled(false);
+            LinearLayout nextAndSubmitButtons = (LinearLayout) findViewById(R.id.next_and_submit_buttons);
+            nextAndSubmitButtons.setVisibility(View.VISIBLE);
             Button nextButton = (Button) findViewById(R.id.next_button);
             nextButton.setEnabled(false);
             userName = userNameInput.getText().toString();
@@ -134,53 +132,8 @@ public class MainActivity extends AppCompatActivity {
             radioButtons.clearCheck();//this clear the check state of radioButtons since same object will be re used in next question
     }
 
-    //this method display the previous question
-    public void prevButton(View view) {
-        RadioGroup radioButtons = (RadioGroup) findViewById(R.id.radio_group);
-        LinearLayout checkGroup = (LinearLayout) findViewById(R.id.check_group);
-        EditText inputText = (EditText) findViewById(R.id.input_text);
-        radioButtons.clearCheck();//clear check state of radioButtons when the prev button is click since its same object is re used
-
-        if (currentQueNum != 1) {
-            currentQueNum -= 1;
-
-            //this set question no 4 to checkbox view UI reply as required
-            if (currentQueNum == 4) {
-                radioButtons.setVisibility(View.GONE);
-                checkGroup.setVisibility(View.VISIBLE);
-                inputText.setVisibility(View.GONE);
-                String que[] = getResources().getStringArray(R.array.questions);
-                TextView questionPane = (TextView) findViewById(R.id.questions_pane);
-                questionPane.setText(que[currentQueNum - 1]);
-            }
-
-            //this will set question number 7 and 10 to textView UI reply
-            else if (currentQueNum == 7 || currentQueNum == 10) {
-                radioButtons.setVisibility(View.GONE);
-                inputText.setVisibility(View.VISIBLE);
-                checkGroup.setVisibility(View.GONE);
-                String que[] = getResources().getStringArray(R.array.questions);
-                TextView questionsPane = (TextView) findViewById(R.id.questions_pane);
-                questionsPane.setText(que[currentQueNum - 1]);
-            }
-
-            // this will set the view with appropriate UI for answers for radio button reply
-            else {
-                radioButtons.setVisibility(View.VISIBLE);
-                inputText.setVisibility(View.GONE);
-                checkGroup.setVisibility(View.GONE);
-                String que[] = getResources().getStringArray(R.array.questions);
-                TextView questionsPane = (TextView) findViewById(R.id.questions_pane);
-                questionsPane.setText(que[currentQueNum - 1]);
-            }
-            optionsSelect();// it is called to display the options available for the current question
-        }
-    }
-
     //this method functions as to start or submit test when appropriate
     public void startOrSubmitButton(View view) {
-        Button prevButton = (Button) findViewById(R.id.prev_button);
-        prevButton.setEnabled(false);
         Button nextButton = (Button) findViewById(R.id.next_button);
         nextButton.setEnabled(false);
         String solutions[] = getResources().getStringArray(R.array.solutions);
@@ -215,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("currentQueNum", String.valueOf(currentQueNum));
             disableStartOrSubmitButton();
             disableNextButton();
-            disablePrevButton();
             startActivity(intent);
         }
         else {
@@ -227,9 +179,8 @@ public class MainActivity extends AppCompatActivity {
             TextView questionsPane = (TextView) findViewById(R.id.questions_pane);
             questionsPane.setText(que[currentQueNum - 1]);
             optionsSelect();
-            startAndSubmitButton.setText("SUBMIT");
+            startAndSubmitButton.setText(R.string.submit_button);
             nextButton.setEnabled(true);
-            prevButton.setEnabled(true);
         }
     }
 
@@ -447,12 +398,6 @@ public class MainActivity extends AppCompatActivity {
         Button nextButton = (Button) findViewById(R.id.next_button);
         nextButton.setEnabled(false);
     }
-
-    private void disablePrevButton() {
-        Button prevButton = (Button) findViewById(R.id.prev_button);
-        prevButton.setEnabled(false);
-    }
-
 
 }
 
