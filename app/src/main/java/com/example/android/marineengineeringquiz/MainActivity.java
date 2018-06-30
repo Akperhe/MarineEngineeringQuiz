@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         EditText inputText = (EditText) findViewById(R.id.input_text);
 
         if (currentQueNum != 0) {
-            getUserAnswer();//get the user answer or response as the instance of submit
+            getUserAnswer();//get the user's answer or response as the instance of submit
             startAndSubmitButton.setEnabled(true);
             for (int i = 0; i < currentQueNum; ++i) {
                 if (userAnswer[i].equalsIgnoreCase(solutions[i]))
