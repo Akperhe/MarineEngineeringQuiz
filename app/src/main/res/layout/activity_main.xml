@@ -119,6 +119,7 @@
                     android:text="C" />
 
                 <RadioButton
+
                     android:id="@+id/radio_Button_D"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -176,7 +177,7 @@
             android:id="@+id/next_and_submit_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal">
 
             <Button

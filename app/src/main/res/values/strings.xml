@@ -45,47 +45,47 @@
     </string-array>
 
     <!--these are the four option to a question-->
-    <string name="que1Ans1">cylinder heads</string>
-    <string name="que1Ans2">exhaust valves</string>
-    <string name="que1Ans3">scavenging air</string>
-    <string name="que1Ans4">injectors</string>
+    <string name="que1Opt1">cylinder heads</string>
+    <string name="que1Opt2">exhaust valves</string>
+    <string name="que1Opt3">scavenging air</string>
+    <string name="que1Opt4">injectors</string>
 
-    <string name="que2Ans1">Water</string>
-    <string name="que2Ans2">Ash</string>
-    <string name="que2Ans3">Catalytic fines</string>
-    <string name="que2Ans4">Sodium</string>
+    <string name="que2Opt1">Water</string>
+    <string name="que2Opt2">Ash</string>
+    <string name="que2Opt3">Catalytic fines</string>
+    <string name="que2Opt4">Sodium</string>
 
-    <string name="que3Ans1">tachometer</string>
-    <string name="que3Ans2">torsion meter</string>
-    <string name="que3Ans3">dynamometer</string>
-    <string name="que3Ans4">pony brake</string>
+    <string name="que3Opt1">tachometer</string>
+    <string name="que3Opt2">torsion meter</string>
+    <string name="que3Opt3">dynamometer</string>
+    <string name="que3Opt4">pony brake</string>
 
-    <string name="que4Ans1">air in system</string>
-    <string name="que4Ans2">water in system</string>
-    <string name="que4Ans3">air filter chocked</string>
-    <string name="que4Ans4">water in air filter</string>
+    <string name="que4Opt1">air in system</string>
+    <string name="que4Opt2">water in system</string>
+    <string name="que4Opt3">air filter chocked</string>
+    <string name="que4Opt4">water in air filter</string>
 
-    <string name="que5Ans1">compression ratio</string>
-    <string name="que5Ans2">valve size</string>
-    <string name="que5Ans3">fuel pressure</string>
-    <string name="que5Ans4">cylinder clearance volume</string>
+    <string name="que5Opt1">compression ratio</string>
+    <string name="que5Opt2">valve size</string>
+    <string name="que5Opt3">fuel pressure</string>
+    <string name="que5Opt4">cylinder clearance volume</string>
 
-    <string name="que6Ans1">Poker gauge</string>
-    <string name="que6Ans2">Feeler gauge</string>
-    <string name="que6Ans3">Telescopic feeler gauge</string>
-    <string name="que6Ans4">Dial gauge</string>
+    <string name="que6Opt1">Poker gauge</string>
+    <string name="que6Opt2">Feeler gauge</string>
+    <string name="que6Opt3">Telescopic feeler gauge</string>
+    <string name="que6Opt4">Dial gauge</string>
 
     <!--here is question 7 which doesn't need options but user text-->
 
-    <string name="que8Ans1">Offset</string>
-    <string name="que8Ans2">Speed droop</string>
-    <string name="que8Ans3">Speed drop</string>
-    <string name="que8Ans4">Speed offset</string>
+    <string name="que8Opt1">Offset</string>
+    <string name="que8Opt2">Speed droop</string>
+    <string name="que8Opt3">Speed drop</string>
+    <string name="que8Opt4">Speed offset</string>
 
-    <string name="que9Ans1">High scavenge air temperature</string>
-    <string name="que9Ans2">Choked air suction filter of a turbocharger</string>
-    <string name="que9Ans3">Blow past in one or more units</string>
-    <string name="que9Ans4">All of the above</string>
+    <string name="que9Opt1">High scavenge air temperature</string>
+    <string name="que9Opt2">Choked air suction filter of a turbocharger</string>
+    <string name="que9Opt3">Blow past in one or more units</string>
+    <string name="que9Opt4">All of the above</string>
 
     <!--here is question 10 which does'nt need options but user text-->
 </resources>

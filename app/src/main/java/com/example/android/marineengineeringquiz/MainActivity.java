@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
     }
 
-    //this method login is execute when the user click login
+    //this method login is execute when the user click login which is mandatory to access test
     public void loginButton(View view) {
         EditText userNameInput = (EditText) findViewById(R.id.user_name);
 
@@ -156,6 +156,9 @@ public class MainActivity extends AppCompatActivity {
             disableCheckBox();
             disableInputText();
             disableRadioButtons();
+            disableStartOrSubmitButton();
+            disableNextButton();
+            // give toast of the overall performance
             Toast displayResult = Toast.makeText(getApplicationContext(), userName.toUpperCase() + " you have score " + String.valueOf(score) + "\nout of " + String.valueOf(maxNumOfQues) + " questions attempted.", Toast.LENGTH_LONG);
             displayResult.show();
 
@@ -166,8 +169,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("oops", oops);
             intent.putExtra("noOfSkippedQues", String.valueOf(noOfSkippedQues));
             intent.putExtra("currentQueNum", String.valueOf(currentQueNum));
-            disableStartOrSubmitButton();
-            disableNextButton();
+
             startActivity(intent);
         }
         else {
@@ -190,10 +192,10 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radio_button_B);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radio_Button_C);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radio_Button_D);
-        radioButtonA.setText(R.string.que1Ans1);
-        radioButtonB.setText(R.string.que1Ans2);
-        radioButtonC.setText(R.string.que1Ans3);
-        radioButtonD.setText(R.string.que1Ans4);
+        radioButtonA.setText(R.string.que1Opt1);
+        radioButtonB.setText(R.string.que1Opt2);
+        radioButtonC.setText(R.string.que1Opt3);
+        radioButtonD.setText(R.string.que1Opt4);
     }
 
     private void ans2Option() {
@@ -201,10 +203,10 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radio_button_B);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radio_Button_C);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radio_Button_D);
-        radioButtonA.setText(R.string.que2Ans1);
-        radioButtonB.setText(R.string.que2Ans2);
-        radioButtonC.setText(R.string.que2Ans3);
-        radioButtonD.setText(R.string.que2Ans4);
+        radioButtonA.setText(R.string.que2Opt1);
+        radioButtonB.setText(R.string.que2Opt2);
+        radioButtonC.setText(R.string.que2Opt3);
+        radioButtonD.setText(R.string.que2Opt4);
     }
 
     private void ans3Option() {
@@ -212,10 +214,10 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radio_button_B);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radio_Button_C);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radio_Button_D);
-        radioButtonA.setText(R.string.que3Ans1);
-        radioButtonB.setText(R.string.que3Ans2);
-        radioButtonC.setText(R.string.que3Ans3);
-        radioButtonD.setText(R.string.que3Ans4);
+        radioButtonA.setText(R.string.que3Opt1);
+        radioButtonB.setText(R.string.que3Opt2);
+        radioButtonC.setText(R.string.que3Opt3);
+        radioButtonD.setText(R.string.que3Opt4);
     }
 
     private void ans4Option() {
@@ -223,10 +225,10 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkbox2 = (CheckBox) findViewById(R.id.checkbox_2);
         CheckBox checkbox3 = (CheckBox) findViewById(R.id.checkbox_3);
         CheckBox checkbox4 = (CheckBox) findViewById(R.id.checkbox_4);
-        checkbox1.setText(R.string.que4Ans1);
-        checkbox2.setText(R.string.que4Ans2);
-        checkbox3.setText(R.string.que4Ans3);
-        checkbox4.setText(R.string.que4Ans4);
+        checkbox1.setText(R.string.que4Opt1);
+        checkbox2.setText(R.string.que4Opt2);
+        checkbox3.setText(R.string.que4Opt3);
+        checkbox4.setText(R.string.que4Opt4);
     }
 
     private void ans5Option() {
@@ -234,10 +236,10 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radio_button_B);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radio_Button_C);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radio_Button_D);
-        radioButtonA.setText(R.string.que5Ans1);
-        radioButtonB.setText(R.string.que5Ans2);
-        radioButtonC.setText(R.string.que5Ans3);
-        radioButtonD.setText(R.string.que5Ans4);
+        radioButtonA.setText(R.string.que5Opt1);
+        radioButtonB.setText(R.string.que5Opt2);
+        radioButtonC.setText(R.string.que5Opt3);
+        radioButtonD.setText(R.string.que5Opt4);
     }
 
     private void ans6Option() {
@@ -245,10 +247,10 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radio_button_B);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radio_Button_C);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radio_Button_D);
-        radioButtonA.setText(R.string.que6Ans1);
-        radioButtonB.setText(R.string.que6Ans2);
-        radioButtonC.setText(R.string.que6Ans3);
-        radioButtonD.setText(R.string.que6Ans4);
+        radioButtonA.setText(R.string.que6Opt1);
+        radioButtonB.setText(R.string.que6Opt2);
+        radioButtonC.setText(R.string.que6Opt3);
+        radioButtonD.setText(R.string.que6Opt4);
     }
 
     private void ans7Option() {
@@ -261,10 +263,10 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radio_button_B);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radio_Button_C);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radio_Button_D);
-        radioButtonA.setText(R.string.que8Ans1);
-        radioButtonB.setText(R.string.que8Ans2);
-        radioButtonC.setText(R.string.que8Ans3);
-        radioButtonD.setText(R.string.que8Ans4);
+        radioButtonA.setText(R.string.que8Opt1);
+        radioButtonB.setText(R.string.que8Opt2);
+        radioButtonC.setText(R.string.que8Opt3);
+        radioButtonD.setText(R.string.que8Opt4);
     }
 
     private void ans9Option() {
@@ -272,17 +274,17 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radio_button_B);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radio_Button_C);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radio_Button_D);
-        radioButtonA.setText(R.string.que9Ans1);
-        radioButtonB.setText(R.string.que9Ans2);
-        radioButtonC.setText(R.string.que9Ans3);
-        radioButtonD.setText(R.string.que9Ans4);
+        radioButtonA.setText(R.string.que9Opt1);
+        radioButtonB.setText(R.string.que9Opt2);
+        radioButtonC.setText(R.string.que9Opt3);
+        radioButtonD.setText(R.string.que9Opt4);
     }
 
     private void ans10Option() {
         ans7Option(); // since they are using same field of edit text
     }
 
-    //this method will display the options for respective questions
+    //this method will select the options to be display for respective questions
     private void optionsSelect() {
         switch (currentQueNum) {
             case 1:
@@ -318,7 +320,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**this method getUserAnswer returns the answer of the user, chosen option,
+    /**
+     * this method getUserAnswer returns the answer of the user, chosen option,
      * else if user skipped it return skipped
      * @return a String data type
      */
@@ -345,14 +348,9 @@ public class MainActivity extends AppCompatActivity {
         //the below block of code can be modify if needed that, to record the state of checkbox
         //and compare with set down cases
         //but in this situation this is the only condition that a correct answer is chosen
-        else if (checkBox1.isChecked() && checkBox2.isChecked() && checkBox3.isChecked()) {
+        else if (checkBox1.isChecked() && checkBox2.isChecked() && checkBox3.isChecked() && !checkBox4.isChecked()) {
             userAnswer[currentQueNum - 1] = checkBox1.getText().toString() + "," + checkBox2.getText().toString() + "," + checkBox3.getText().toString();
 
-            //there is need to unchecked these checkboxes in case of subsequent use and to conform to text instruction in the case of hitting the prev button
-            checkBox1.toggle();
-            checkBox2.toggle();
-            checkBox3.toggle();
-            checkBox4.toggle();
         } else if (inputText.getText().toString().trim().length() != 0) {
             userAnswer[currentQueNum - 1] = inputText.getText().toString();
             inputText.setText("");// this will set the text field back to empty for subsequent use
