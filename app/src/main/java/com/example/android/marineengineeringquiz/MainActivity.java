@@ -128,8 +128,10 @@ public class MainActivity extends AppCompatActivity {
             endOfQuiz.show();
             submit.setEnabled(true);
         }
-        if (currentQueNum != maxNumOfQues)
+        if (currentQueNum != maxNumOfQues) {
+            inputText.setText("");//clear the text field for subsequent use
             radioButtons.clearCheck();//this clear the check state of radioButtons since same object will be re used in next question
+        }
     }
 
     //this method functions as to start or submit test when appropriate
